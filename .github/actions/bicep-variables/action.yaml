@@ -11,7 +11,7 @@ runs:
   using: "composite"
   steps:
     - name: Get Variables from parameters.json
-      uses: azure/powershell@v2
+      uses: azure/powershell@v3
       with:
         azPSVersion: 'latest'
         inlineScript: |

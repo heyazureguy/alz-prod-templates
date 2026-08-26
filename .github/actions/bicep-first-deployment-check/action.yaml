@@ -11,7 +11,7 @@ runs:
   steps:
     - name: First Deployment Check
       id: firstDeployment
-      uses: azure/powershell@v2
+      uses: azure/powershell@v3
       with:
         azPSVersion: 'latest'
         inlineScript: |
