@@ -44,7 +44,7 @@ jobs:
     name: What If
     runs-on:
       self-hosted
-    concurrency: prod-tfstate
+    concurrency: alz-prod-deployment
     environment: alz-prod-plan
     permissions:
       id-token: write

@@ -63,7 +63,7 @@ jobs:
     name: What If
     runs-on:
       self-hosted
-    concurrency: prod-tfstate
+    concurrency: alz-prod-deployment
     environment: alz-prod-plan
     permissions:
       id-token: write
@@ -364,7 +364,7 @@ jobs:
     if: ${{ always() && !contains(needs.*.result, 'failure') && !contains(needs.*.result, 'cancelled') }}
     runs-on:
       self-hosted
-    concurrency: prod-tfstate
+    concurrency: alz-prod-deployment
     environment: alz-prod-apply
     permissions:
       id-token: write
