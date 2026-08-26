@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout Bicep Module
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install Bicep and Update Az Module
         uses: heyazureguy/alz-prod-templates/.github/actions/bicep-installer@main
@@ -54,7 +54,7 @@ jobs:
 
     steps:
       - name: Checkout Bicep Module
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Get Bicep Variables
         uses: heyazureguy/alz-prod-templates/.github/actions/bicep-variables@main
@@ -65,7 +65,7 @@ jobs:
         uses: heyazureguy/alz-prod-templates/.github/actions/bicep-installer@main
 
       - name: OIDC Login to Tenant
-        uses: azure/login@v2
+        uses: azure/login@v3
         with:
           client-id: ${{ vars.AZURE_CLIENT_ID }}
           tenant-id: ${{ vars.AZURE_TENANT_ID }}
